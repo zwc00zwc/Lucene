@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MultiSite_GangGuanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Products_SellOffer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryId" Type="int" />
+    <Property Name="CategoryPath" Type="varchar" MaxLength="255" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserCategorys" Type="varchar" MaxLength="100" />
+    <Property Name="Title" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Keywords" Type="nvarchar" MaxLength="255" />
+    <Property Name="BizType" Type="tinyint" />
+    <Property Name="AmountOnSale" Type="float" />
+    <Property Name="SysAttr" Type="nvarchar" MaxLength="512" />
+    <Property Name="CusAttr" Type="nvarchar" MaxLength="512" />
+    <Property Name="SpecAttr" Type="nvarchar" MaxLength="512" />
+    <Property Name="Unit" Type="tinyint" />
+    <Property Name="PriceUnit" Type="tinyint" />
+    <Property Name="RetailPrice" Type="money" />
+    <Property Name="UnitPrice" Type="money" />
+    <Property Name="PriceRanges" Type="varchar" MaxLength="128" />
+    <Property Name="OfferWeight" Type="float" />
+    <Property Name="TermOfferProcess" Type="int" />
+    <Property Name="QuotationMethod" Type="tinyint" />
+    <Property Name="BeginAmount" Type="int" />
+    <Property Name="Deliveryterm" Type="nvarchar" MaxLength="128" />
+    <Property Name="Packaging" Type="nvarchar" MaxLength="512" />
+    <Property Name="ImageList" Type="varchar" MaxLength="255" />
+    <Property Name="SendGoodsId" Type="int" />
+    <Property Name="Summary" Type="nvarchar" MaxLength="128" />
+    <Property Name="InfoType" Type="tinyint" />
+    <Property Name="MemberId" Type="int" />
+    <Property Name="PageUrl" Type="varchar" MaxLength="255" />
+    <Property Name="QualityLevel" Type="tinyint" />
+    <Property Name="IsSkuTradeSupported" Type="bit" />
+    <Property Name="InquireNum" Type="int" />
+    <Property Name="Guid" Type="varchar" MaxLength="10" />
+    <Property Name="RefurbishTime" Type="bigint" />
+    <Property Name="Favourites" Type="int" />
+    <Property Name="Initial" Type="char" MaxLength="1" />
+    <Property Name="IsSkuOffer" Type="bit" />
+    <Property Name="ModifiedTime" Type="datetime" />
+    <Property Name="LastRepostTime" Type="datetime" />
+    <Property Name="ApprovedTime" Type="datetime" />
+    <Property Name="ExpireDate" Type="datetime" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="AdminId" Type="int" />
+    <Property Name="IsChecked" Type="tinyint" />
+    <Property Name="CheckTime" Type="datetime" />
+    <Property Name="CheckMessage" Type="nvarchar" MaxLength="250" />
+    <Property Name="InfoStatus" Type="tinyint" />
+    <Property Name="GoodsProvince" Type="nvarchar" MaxLength="16" />
+    <Property Name="GoodsCity" Type="nvarchar" MaxLength="8" />
+  </EntityType>
+  <EntityType Name="Products_SellOffer_Detail">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="SellOfferId" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SellOfferId" Type="int" Nullable="false" />
+    <Property Name="Detail" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="MultiSite_GangGuanModelStoreContainer">
+    <EntitySet Name="Products_SellOffer" EntityType="Self.Products_SellOffer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products_SellOffer_Detail" EntityType="Self.Products_SellOffer_Detail" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

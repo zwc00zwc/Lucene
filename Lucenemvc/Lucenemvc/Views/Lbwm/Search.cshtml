@@ -1,0 +1,33 @@
+﻿@using Lucenemvc.Models
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Search</title>
+</head>
+<body>
+    <div> 
+        <ul>
+            @if (ViewData["pro"] != null)
+            {
+                foreach (var item in ViewData["pro"] as List<ProductInfo>)
+                {
+                    <li>
+                        <div>@item.Id</div><div>@Html.Raw(item.ProductName)</div><div>价格:@Html.Raw(item.MinSalePrice)</div><div>销量:@Html.Raw(item.SaleCounts)</div>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+    <div>
+        <a id="previous" href="/Lbwm/Search/@ViewData["key"]_@(int.Parse(ViewData["currpage"].ToString())-1).html">上一页</a>
+        <a id="currpage">@ViewData["currpage"]</a>
+        <a id="next" href="/Lbwm/Search/@ViewData["key"]_@(int.Parse(ViewData["currpage"].ToString())+1).html">下一页</a>
+    </div>
+</body>
+</html>

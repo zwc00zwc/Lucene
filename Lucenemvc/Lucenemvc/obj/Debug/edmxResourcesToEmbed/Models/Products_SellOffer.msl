@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MultiSite_GangGuanModelStoreContainer" CdmEntityContainer="MultiSite_GangGuanEntities">
+    <EntitySetMapping Name="Products_SellOffer">
+      <EntityTypeMapping TypeName="MultiSite_GangGuanModel.Products_SellOffer">
+        <MappingFragment StoreEntitySet="Products_SellOffer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="CategoryPath" ColumnName="CategoryPath" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="UserCategorys" ColumnName="UserCategorys" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="BizType" ColumnName="BizType" />
+          <ScalarProperty Name="AmountOnSale" ColumnName="AmountOnSale" />
+          <ScalarProperty Name="SysAttr" ColumnName="SysAttr" />
+          <ScalarProperty Name="CusAttr" ColumnName="CusAttr" />
+          <ScalarProperty Name="SpecAttr" ColumnName="SpecAttr" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="PriceUnit" ColumnName="PriceUnit" />
+          <ScalarProperty Name="RetailPrice" ColumnName="RetailPrice" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="PriceRanges" ColumnName="PriceRanges" />
+          <ScalarProperty Name="OfferWeight" ColumnName="OfferWeight" />
+          <ScalarProperty Name="TermOfferProcess" ColumnName="TermOfferProcess" />
+          <ScalarProperty Name="QuotationMethod" ColumnName="QuotationMethod" />
+          <ScalarProperty Name="BeginAmount" ColumnName="BeginAmount" />
+          <ScalarProperty Name="Deliveryterm" ColumnName="Deliveryterm" />
+          <ScalarProperty Name="Packaging" ColumnName="Packaging" />
+          <ScalarProperty Name="ImageList" ColumnName="ImageList" />
+          <ScalarProperty Name="SendGoodsId" ColumnName="SendGoodsId" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="InfoType" ColumnName="InfoType" />
+          <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+          <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+          <ScalarProperty Name="QualityLevel" ColumnName="QualityLevel" />
+          <ScalarProperty Name="IsSkuTradeSupported" ColumnName="IsSkuTradeSupported" />
+          <ScalarProperty Name="InquireNum" ColumnName="InquireNum" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+          <ScalarProperty Name="RefurbishTime" ColumnName="RefurbishTime" />
+          <ScalarProperty Name="Favourites" ColumnName="Favourites" />
+          <ScalarProperty Name="Initial" ColumnName="Initial" />
+          <ScalarProperty Name="IsSkuOffer" ColumnName="IsSkuOffer" />
+          <ScalarProperty Name="ModifiedTime" ColumnName="ModifiedTime" />
+          <ScalarProperty Name="LastRepostTime" ColumnName="LastRepostTime" />
+          <ScalarProperty Name="ApprovedTime" ColumnName="ApprovedTime" />
+          <ScalarProperty Name="ExpireDate" ColumnName="ExpireDate" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+          <ScalarProperty Name="IsChecked" ColumnName="IsChecked" />
+          <ScalarProperty Name="CheckTime" ColumnName="CheckTime" />
+          <ScalarProperty Name="CheckMessage" ColumnName="CheckMessage" />
+          <ScalarProperty Name="InfoStatus" ColumnName="InfoStatus" />
+          <ScalarProperty Name="GoodsProvince" ColumnName="GoodsProvince" />
+          <ScalarProperty Name="GoodsCity" ColumnName="GoodsCity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

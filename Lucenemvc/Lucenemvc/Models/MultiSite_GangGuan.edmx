@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MultiSite_GangGuanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Products_SellOffer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CategoryId" Type="int" />
+          <Property Name="CategoryPath" Type="varchar" MaxLength="255" />
+          <Property Name="CategoryName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserCategorys" Type="varchar" MaxLength="100" />
+          <Property Name="Title" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Keywords" Type="nvarchar" MaxLength="255" />
+          <Property Name="BizType" Type="tinyint" />
+          <Property Name="AmountOnSale" Type="float" />
+          <Property Name="SysAttr" Type="nvarchar" MaxLength="512" />
+          <Property Name="CusAttr" Type="nvarchar" MaxLength="512" />
+          <Property Name="SpecAttr" Type="nvarchar" MaxLength="512" />
+          <Property Name="Unit" Type="tinyint" />
+          <Property Name="PriceUnit" Type="tinyint" />
+          <Property Name="RetailPrice" Type="money" />
+          <Property Name="UnitPrice" Type="money" />
+          <Property Name="PriceRanges" Type="varchar" MaxLength="128" />
+          <Property Name="OfferWeight" Type="float" />
+          <Property Name="TermOfferProcess" Type="int" />
+          <Property Name="QuotationMethod" Type="tinyint" />
+          <Property Name="BeginAmount" Type="int" />
+          <Property Name="Deliveryterm" Type="nvarchar" MaxLength="128" />
+          <Property Name="Packaging" Type="nvarchar" MaxLength="512" />
+          <Property Name="ImageList" Type="varchar" MaxLength="255" />
+          <Property Name="SendGoodsId" Type="int" />
+          <Property Name="Summary" Type="nvarchar" MaxLength="128" />
+          <Property Name="InfoType" Type="tinyint" />
+          <Property Name="MemberId" Type="int" />
+          <Property Name="PageUrl" Type="varchar" MaxLength="255" />
+          <Property Name="QualityLevel" Type="tinyint" />
+          <Property Name="IsSkuTradeSupported" Type="bit" />
+          <Property Name="InquireNum" Type="int" />
+          <Property Name="Guid" Type="varchar" MaxLength="10" />
+          <Property Name="RefurbishTime" Type="bigint" />
+          <Property Name="Favourites" Type="int" />
+          <Property Name="Initial" Type="char" MaxLength="1" />
+          <Property Name="IsSkuOffer" Type="bit" />
+          <Property Name="ModifiedTime" Type="datetime" />
+          <Property Name="LastRepostTime" Type="datetime" />
+          <Property Name="ApprovedTime" Type="datetime" />
+          <Property Name="ExpireDate" Type="datetime" />
+          <Property Name="AddTime" Type="datetime" />
+          <Property Name="AdminId" Type="int" />
+          <Property Name="IsChecked" Type="tinyint" />
+          <Property Name="CheckTime" Type="datetime" />
+          <Property Name="CheckMessage" Type="nvarchar" MaxLength="250" />
+          <Property Name="InfoStatus" Type="tinyint" />
+          <Property Name="GoodsProvince" Type="nvarchar" MaxLength="16" />
+          <Property Name="GoodsCity" Type="nvarchar" MaxLength="8" />
+        </EntityType>
+        <EntityType Name="Products_SellOffer_Detail">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="SellOfferId" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SellOfferId" Type="int" Nullable="false" />
+          <Property Name="Detail" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="MultiSite_GangGuanModelStoreContainer">
+          <EntitySet Name="Products_SellOffer" EntityType="Self.Products_SellOffer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Products_SellOffer_Detail" EntityType="Self.Products_SellOffer_Detail" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MultiSite_GangGuanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Products_SellOffer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryId" Type="Int32" />
+          <Property Name="CategoryPath" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserCategorys" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Keywords" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="BizType" Type="Byte" />
+          <Property Name="AmountOnSale" Type="Double" />
+          <Property Name="SysAttr" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="CusAttr" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="SpecAttr" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="Unit" Type="Byte" />
+          <Property Name="PriceUnit" Type="Byte" />
+          <Property Name="RetailPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PriceRanges" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="OfferWeight" Type="Double" />
+          <Property Name="TermOfferProcess" Type="Int32" />
+          <Property Name="QuotationMethod" Type="Byte" />
+          <Property Name="BeginAmount" Type="Int32" />
+          <Property Name="Deliveryterm" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Packaging" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="ImageList" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="SendGoodsId" Type="Int32" />
+          <Property Name="Summary" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="InfoType" Type="Byte" />
+          <Property Name="MemberId" Type="Int32" />
+          <Property Name="PageUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="QualityLevel" Type="Byte" />
+          <Property Name="IsSkuTradeSupported" Type="Boolean" />
+          <Property Name="InquireNum" Type="Int32" />
+          <Property Name="Guid" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="RefurbishTime" Type="Int64" />
+          <Property Name="Favourites" Type="Int32" />
+          <Property Name="Initial" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="IsSkuOffer" Type="Boolean" />
+          <Property Name="ModifiedTime" Type="DateTime" Precision="3" />
+          <Property Name="LastRepostTime" Type="DateTime" Precision="3" />
+          <Property Name="ApprovedTime" Type="DateTime" Precision="3" />
+          <Property Name="ExpireDate" Type="DateTime" Precision="3" />
+          <Property Name="AddTime" Type="DateTime" Precision="3" />
+          <Property Name="AdminId" Type="Int32" />
+          <Property Name="IsChecked" Type="Byte" />
+          <Property Name="CheckTime" Type="DateTime" Precision="3" />
+          <Property Name="CheckMessage" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="InfoStatus" Type="Byte" />
+          <Property Name="GoodsProvince" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="GoodsCity" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Products_SellOffer_Detail">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="SellOfferId" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SellOfferId" Type="Int32" Nullable="false" />
+          <Property Name="Detail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="MultiSite_GangGuanEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Products_SellOffer" EntityType="Self.Products_SellOffer" />
+          <EntitySet Name="Products_SellOffer_Detail" EntityType="Self.Products_SellOffer_Detail" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MultiSite_GangGuanModelStoreContainer" CdmEntityContainer="MultiSite_GangGuanEntities">
+          <EntitySetMapping Name="Products_SellOffer">
+            <EntityTypeMapping TypeName="MultiSite_GangGuanModel.Products_SellOffer">
+              <MappingFragment StoreEntitySet="Products_SellOffer">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="CategoryPath" ColumnName="CategoryPath" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="UserCategorys" ColumnName="UserCategorys" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+                <ScalarProperty Name="BizType" ColumnName="BizType" />
+                <ScalarProperty Name="AmountOnSale" ColumnName="AmountOnSale" />
+                <ScalarProperty Name="SysAttr" ColumnName="SysAttr" />
+                <ScalarProperty Name="CusAttr" ColumnName="CusAttr" />
+                <ScalarProperty Name="SpecAttr" ColumnName="SpecAttr" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="PriceUnit" ColumnName="PriceUnit" />
+                <ScalarProperty Name="RetailPrice" ColumnName="RetailPrice" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="PriceRanges" ColumnName="PriceRanges" />
+                <ScalarProperty Name="OfferWeight" ColumnName="OfferWeight" />
+                <ScalarProperty Name="TermOfferProcess" ColumnName="TermOfferProcess" />
+                <ScalarProperty Name="QuotationMethod" ColumnName="QuotationMethod" />
+                <ScalarProperty Name="BeginAmount" ColumnName="BeginAmount" />
+                <ScalarProperty Name="Deliveryterm" ColumnName="Deliveryterm" />
+                <ScalarProperty Name="Packaging" ColumnName="Packaging" />
+                <ScalarProperty Name="ImageList" ColumnName="ImageList" />
+                <ScalarProperty Name="SendGoodsId" ColumnName="SendGoodsId" />
+                <ScalarProperty Name="Summary" ColumnName="Summary" />
+                <ScalarProperty Name="InfoType" ColumnName="InfoType" />
+                <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+                <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+                <ScalarProperty Name="QualityLevel" ColumnName="QualityLevel" />
+                <ScalarProperty Name="IsSkuTradeSupported" ColumnName="IsSkuTradeSupported" />
+                <ScalarProperty Name="InquireNum" ColumnName="InquireNum" />
+                <ScalarProperty Name="Guid" ColumnName="Guid" />
+                <ScalarProperty Name="RefurbishTime" ColumnName="RefurbishTime" />
+                <ScalarProperty Name="Favourites" ColumnName="Favourites" />
+                <ScalarProperty Name="Initial" ColumnName="Initial" />
+                <ScalarProperty Name="IsSkuOffer" ColumnName="IsSkuOffer" />
+                <ScalarProperty Name="ModifiedTime" ColumnName="ModifiedTime" />
+                <ScalarProperty Name="LastRepostTime" ColumnName="LastRepostTime" />
+                <ScalarProperty Name="ApprovedTime" ColumnName="ApprovedTime" />
+                <ScalarProperty Name="ExpireDate" ColumnName="ExpireDate" />
+                <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+                <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+                <ScalarProperty Name="IsChecked" ColumnName="IsChecked" />
+                <ScalarProperty Name="CheckTime" ColumnName="CheckTime" />
+                <ScalarProperty Name="CheckMessage" ColumnName="CheckMessage" />
+                <ScalarProperty Name="InfoStatus" ColumnName="InfoStatus" />
+                <ScalarProperty Name="GoodsProvince" ColumnName="GoodsProvince" />
+                <ScalarProperty Name="GoodsCity" ColumnName="GoodsCity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products_SellOffer_Detail">
+            <EntityTypeMapping TypeName="MultiSite_GangGuanModel.Products_SellOffer_Detail">
+              <MappingFragment StoreEntitySet="Products_SellOffer_Detail">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="SellOfferId" ColumnName="SellOfferId" />
+                <ScalarProperty Name="Detail" ColumnName="Detail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,41 @@
+﻿@using Lucenemvc.Models
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Search</title>
+    <script type="text/javascript" src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        
+    </script>
+</head>
+<body>
+    <form action="" method="post">
+        <input type="text" name="Searchkey" value="@ViewData["key"]">
+        <input type="submit" value="搜索" />
+    </form>
+    <div>
+        <ul>
+            @if (ViewData["pro"] != null)
+            { 
+                foreach (var item in ViewData["pro"] as List<ShowInfo>)
+                {
+                    <li>
+                       <div>@item.Id</div><div>@Html.Raw(item.Title)</div><div>@Html.Raw(item.Keywords)</div><div>内容:@Html.Raw(item.Detail)</div>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+    <div>
+        <a id="previous" href="/Home/Search/@ViewData["key"]_@(int.Parse(ViewData["currpage"].ToString())-1).html">上一页</a>
+        <a id="currpage">@ViewData["currpage"]</a>
+        <a id="next" href="/Home/Search/@ViewData["key"]_@(int.Parse(ViewData["currpage"].ToString())+1).html">下一页</a>
+    </div>
+</body>
+</html>

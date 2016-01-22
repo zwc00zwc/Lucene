@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MultiSite_GangGuanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Products_SellOffer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryId" Type="Int32" />
+    <Property Name="CategoryPath" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserCategorys" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Keywords" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BizType" Type="Byte" />
+    <Property Name="AmountOnSale" Type="Double" />
+    <Property Name="SysAttr" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Name="CusAttr" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Name="SpecAttr" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Name="Unit" Type="Byte" />
+    <Property Name="PriceUnit" Type="Byte" />
+    <Property Name="RetailPrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PriceRanges" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="OfferWeight" Type="Double" />
+    <Property Name="TermOfferProcess" Type="Int32" />
+    <Property Name="QuotationMethod" Type="Byte" />
+    <Property Name="BeginAmount" Type="Int32" />
+    <Property Name="Deliveryterm" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Packaging" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Name="ImageList" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SendGoodsId" Type="Int32" />
+    <Property Name="Summary" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="InfoType" Type="Byte" />
+    <Property Name="MemberId" Type="Int32" />
+    <Property Name="PageUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="QualityLevel" Type="Byte" />
+    <Property Name="IsSkuTradeSupported" Type="Boolean" />
+    <Property Name="InquireNum" Type="Int32" />
+    <Property Name="Guid" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="RefurbishTime" Type="Int64" />
+    <Property Name="Favourites" Type="Int32" />
+    <Property Name="Initial" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="IsSkuOffer" Type="Boolean" />
+    <Property Name="ModifiedTime" Type="DateTime" Precision="3" />
+    <Property Name="LastRepostTime" Type="DateTime" Precision="3" />
+    <Property Name="ApprovedTime" Type="DateTime" Precision="3" />
+    <Property Name="ExpireDate" Type="DateTime" Precision="3" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="AdminId" Type="Int32" />
+    <Property Name="IsChecked" Type="Byte" />
+    <Property Name="CheckTime" Type="DateTime" Precision="3" />
+    <Property Name="CheckMessage" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="InfoStatus" Type="Byte" />
+    <Property Name="GoodsProvince" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="GoodsCity" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="MultiSite_GangGuanEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Products_SellOffer" EntityType="Self.Products_SellOffer" />
+  </EntityContainer>
+</Schema>

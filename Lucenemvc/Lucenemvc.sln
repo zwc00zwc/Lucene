@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lucenemvc", "Lucenemvc\Lucenemvc.csproj", "{67DC7648-643E-4365-A613-1C0720C08982}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndexService", "..\IndexService\IndexService\IndexService.csproj", "{16ACCEFB-C180-480C-B695-04A48397B0F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67DC7648-643E-4365-A613-1C0720C08982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67DC7648-643E-4365-A613-1C0720C08982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67DC7648-643E-4365-A613-1C0720C08982}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67DC7648-643E-4365-A613-1C0720C08982}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16ACCEFB-C180-480C-B695-04A48397B0F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16ACCEFB-C180-480C-B695-04A48397B0F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16ACCEFB-C180-480C-B695-04A48397B0F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16ACCEFB-C180-480C-B695-04A48397B0F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
